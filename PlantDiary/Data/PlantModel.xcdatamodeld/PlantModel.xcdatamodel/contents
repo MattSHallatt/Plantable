@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BuddingStage" representedClassName=".BuddingStage" syncable="YES">
+        <attribute name="buddingDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="buddingPlant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plant" inverseName="buddingStage" inverseEntity="Plant"/>
+    </entity>
+    <entity name="EndOfLifeStage" representedClassName=".EndOfLifeStage" syncable="YES">
+        <attribute name="endOfLifeDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="endOfLifePlant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plant" inverseName="endOfLifeStage" inverseEntity="Plant"/>
+    </entity>
+    <entity name="FloweringStage" representedClassName=".FloweringStage" syncable="YES">
+        <attribute name="floweringDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="floweringPlant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plant" inverseName="floweringStage" inverseEntity="Plant"/>
+    </entity>
+    <entity name="FruitingStage" representedClassName=".FruitingStage" syncable="YES">
+        <attribute name="fruitingDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="fruitingPlant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plant" inverseName="fruitingStage" inverseEntity="Plant"/>
+    </entity>
+    <entity name="Plant" representedClassName=".Plant" syncable="YES">
+        <attribute name="dateAdded" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="latinName" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <attribute name="nickname" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <relationship name="buddingStage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BuddingStage" inverseName="buddingPlant" inverseEntity="BuddingStage"/>
+        <relationship name="endOfLifeStage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EndOfLifeStage" inverseName="endOfLifePlant" inverseEntity="EndOfLifeStage"/>
+        <relationship name="floweringStage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FloweringStage" inverseName="floweringPlant" inverseEntity="FloweringStage"/>
+        <relationship name="fruitingStage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FruitingStage" inverseName="fruitingPlant" inverseEntity="FruitingStage"/>
+        <relationship name="plantedStage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlantedStage" inverseName="plantedPlant" inverseEntity="PlantedStage"/>
+        <relationship name="shootStage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShootStage" inverseName="shootingPlant" inverseEntity="ShootStage"/>
+    </entity>
+    <entity name="PlantedStage" representedClassName=".PlantedStage" syncable="YES">
+        <attribute name="plantedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="plantedPlant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plant" inverseName="plantedStage" inverseEntity="Plant"/>
+    </entity>
+    <entity name="ShootStage" representedClassName=".ShootStage" syncable="YES">
+        <attribute name="shootDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="shootingPlant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plant" inverseName="shootStage" inverseEntity="Plant"/>
+    </entity>
+    <elements>
+        <element name="BuddingStage" positionX="-18" positionY="36" width="128" height="73"/>
+        <element name="EndOfLifeStage" positionX="36" positionY="81" width="128" height="73"/>
+        <element name="FloweringStage" positionX="0" positionY="45" width="128" height="73"/>
+        <element name="FruitingStage" positionX="18" positionY="63" width="128" height="73"/>
+        <element name="Plant" positionX="-63" positionY="-18" width="128" height="193"/>
+        <element name="PlantedStage" positionX="-54" positionY="18" width="128" height="73"/>
+        <element name="ShootStage" positionX="-36" positionY="27" width="128" height="73"/>
+    </elements>
+</model>

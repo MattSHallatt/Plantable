@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rnA-k0-Hmz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Plants-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="My Plants" id="BYZ-38-t0r" customClass="PlantListViewController" customModule="PlantDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UCa-a2-TjG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlantListTableViewCellReuseIdentifier" textLabel="Xsb-fD-xDK" detailTextLabel="G3J-j7-Rka" style="IBUITableViewCellStyleSubtitle" id="pbh-Tc-aoA" customClass="PlantListTableViewCell" customModule="PlantDiary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pbh-Tc-aoA" translatesAutoresizingMaskIntoConstraints="NO" id="Hbo-FH-mvi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xsb-fD-xDK">
+                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G3J-j7-Rka">
+                                                    <rect key="frame" x="20" y="31.5" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Stl-pT-DOg">
+                                                    <rect key="frame" x="240" y="30" width="125" height="15"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seed" translatesAutoresizingMaskIntoConstraints="NO" id="1IK-qg-Uzh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="1IK-qg-Uzh" secondAttribute="height" multiplier="1:1" id="KXG-Fq-sKr"/>
+                                                                <constraint firstAttribute="height" constant="15" id="fIe-W2-mAX"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoot" translatesAutoresizingMaskIntoConstraints="NO" id="0nE-Xs-3FS">
+                                                            <rect key="frame" x="22" y="0.0" width="15" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="15" id="JN6-tG-qxk"/>
+                                                                <constraint firstAttribute="width" secondItem="0nE-Xs-3FS" secondAttribute="height" multiplier="1:1" id="omR-5Z-HAa"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bud" translatesAutoresizingMaskIntoConstraints="NO" id="O2U-Hh-g0C">
+                                                            <rect key="frame" x="44" y="0.0" width="15" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="15" id="7UE-ed-Avj"/>
+                                                                <constraint firstAttribute="width" secondItem="O2U-Hh-g0C" secondAttribute="height" multiplier="1:1" id="bso-ze-jhH"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="bXa-OG-FNg">
+                                                            <rect key="frame" x="66" y="0.0" width="15" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="bXa-OG-FNg" secondAttribute="height" multiplier="1:1" id="ORh-lg-cHO"/>
+                                                                <constraint firstAttribute="height" constant="15" id="UGP-TF-PDm"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fruit" translatesAutoresizingMaskIntoConstraints="NO" id="La7-1B-Dob">
+                                                            <rect key="frame" x="88" y="0.0" width="15" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="15" id="dfZ-bv-oM4"/>
+                                                                <constraint firstAttribute="width" secondItem="La7-1B-Dob" secondAttribute="height" multiplier="1:1" id="jrK-MV-gjP"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endOfLife" translatesAutoresizingMaskIntoConstraints="NO" id="Vq3-xe-BCo">
+                                                            <rect key="frame" x="110" y="0.0" width="15" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="Vq3-xe-BCo" secondAttribute="height" multiplier="1:1" id="DPV-fp-YWO"/>
+                                                                <constraint firstAttribute="height" constant="15" id="YUN-lg-1YU"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="budIconImageView" destination="O2U-Hh-g0C" id="lQZ-th-hHE"/>
+                                            <outlet property="endOfLifeIconImageView" destination="Vq3-xe-BCo" id="zCZ-c8-A7V"/>
+                                            <outlet property="flowerIconImageView" destination="bXa-OG-FNg" id="mc6-jf-x1v"/>
+                                            <outlet property="fruitIconImageView" destination="La7-1B-Dob" id="sNc-SA-IDZ"/>
+                                            <outlet property="iconStackView" destination="Stl-pT-DOg" id="1ug-Ih-wzv"/>
+                                            <outlet property="plantIconImageView" destination="1IK-qg-Uzh" id="zV0-li-XUM"/>
+                                            <outlet property="shootIconImageView" destination="0nE-Xs-3FS" id="Pau-7A-u6l"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="k53-va-vBp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3jA-r5-Wrj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UCa-a2-TjG" secondAttribute="trailing" id="0GW-F9-m7E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UCa-a2-TjG" secondAttribute="bottom" id="MsU-ov-eZ5"/>
+                            <constraint firstItem="UCa-a2-TjG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="q94-v1-QmL"/>
+                            <constraint firstItem="UCa-a2-TjG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w2h-l8-dDE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Plants" id="sBe-1I-81z">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Er4-Lz-lJO">
+                            <connections>
+                                <segue destination="eWV-Ze-Xei" kind="presentation" id="BCj-sP-dCZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="newPlantButton" destination="Er4-Lz-lJO" id="uV1-Kt-KCG"/>
+                        <outlet property="tableView" destination="UCa-a2-TjG" id="yIl-7S-SFb"/>
+                        <segue destination="dy5-GK-chL" kind="show" identifier="ShowPlantDetails" id="jzG-me-I0A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Plant Detail View Controller-->
+        <scene sceneID="dcR-YD-itk">
+            <objects>
+                <viewController id="dy5-GK-chL" customClass="PlantDetailViewController" customModule="PlantDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="85e-d8-Z7S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qDP-53-s2B">
+                                <rect key="frame" x="20" y="108" width="374" height="1180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBI-Wt-nYI">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHB-j8-6Oh">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="200" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hkJ-OZ-KxQ">
+                                        <rect key="frame" x="0.0" y="140" width="374" height="200"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2W-pc-6gD">
+                                        <rect key="frame" x="0.0" y="360" width="374" height="120"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.099288313356164379" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="ctt-uR-hNr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Planted"/>
+                                        <connections>
+                                            <action selector="upgradeToPlanted" destination="dy5-GK-chL" eventType="touchUpInside" id="Dfe-GT-V6C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZp-Nn-LlN">
+                                        <rect key="frame" x="0.0" y="500" width="374" height="120"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="vaQ-lT-UBA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Shooting"/>
+                                        <connections>
+                                            <action selector="upgradeToPlanted" destination="dy5-GK-chL" eventType="touchUpInside" id="hrw-tN-tZ7"/>
+                                            <action selector="upgradeToShooting" destination="dy5-GK-chL" eventType="touchUpInside" id="IJi-oS-Pnb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ete-2a-io3">
+                                        <rect key="frame" x="0.0" y="640" width="374" height="120"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="a8G-NE-VGa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Budding"/>
+                                        <connections>
+                                            <action selector="upgradeToBudding" destination="dy5-GK-chL" eventType="touchUpInside" id="3zK-SF-YGG"/>
+                                            <action selector="upgradeToPlanted" destination="dy5-GK-chL" eventType="touchUpInside" id="Ecr-L1-oPz"/>
+                                            <action selector="upgradeToShooting" destination="dy5-GK-chL" eventType="touchUpInside" id="7Qh-r1-JjX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vt-6p-MRW">
+                                        <rect key="frame" x="0.0" y="780" width="374" height="120"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="qan-ae-GxW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Flowering"/>
+                                        <connections>
+                                            <action selector="upgradeToFlowering" destination="dy5-GK-chL" eventType="touchUpInside" id="v0x-8T-bJg"/>
+                                            <action selector="upgradeToPlanted" destination="dy5-GK-chL" eventType="touchUpInside" id="fkq-RZ-aPr"/>
+                                            <action selector="upgradeToShooting" destination="dy5-GK-chL" eventType="touchUpInside" id="1LQ-nj-F9o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnv-02-fhj">
+                                        <rect key="frame" x="0.0" y="920" width="374" height="120"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="UWG-ni-dkb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Fruiting"/>
+                                        <connections>
+                                            <action selector="upgradeToFruiting" destination="dy5-GK-chL" eventType="touchUpInside" id="JhF-eO-OhY"/>
+                                            <action selector="upgradeToPlanted" destination="dy5-GK-chL" eventType="touchUpInside" id="XuS-wf-kzC"/>
+                                            <action selector="upgradeToShooting" destination="dy5-GK-chL" eventType="touchUpInside" id="7qB-B9-TZy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtA-aa-6Te">
+                                        <rect key="frame" x="0.0" y="1060" width="374" height="120"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="SUb-Y4-0Vz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="End Of Life"/>
+                                        <connections>
+                                            <action selector="upgradeToEndOfLife" destination="dy5-GK-chL" eventType="touchUpInside" id="Ws4-BA-W0O"/>
+                                            <action selector="upgradeToPlanted" destination="dy5-GK-chL" eventType="touchUpInside" id="h5v-cF-NYF"/>
+                                            <action selector="upgradeToShooting" destination="dy5-GK-chL" eventType="touchUpInside" id="vSo-R7-rRj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qDP-53-s2B" firstAttribute="top" secondItem="RVN-7P-XBd" secondAttribute="top" constant="20" id="1Pf-87-W1D"/>
+                            <constraint firstItem="RVN-7P-XBd" firstAttribute="trailing" secondItem="qDP-53-s2B" secondAttribute="trailing" constant="20" id="LRt-vR-0nd"/>
+                            <constraint firstItem="qDP-53-s2B" firstAttribute="leading" secondItem="RVN-7P-XBd" secondAttribute="leading" constant="20" id="gBA-gn-wHe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RVN-7P-XBd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kmt-fd-ykf"/>
+                    <connections>
+                        <outlet property="buddingStageButton" destination="ete-2a-io3" id="GXw-Zn-oY2"/>
+                        <outlet property="endOfLifeStageButton" destination="CtA-aa-6Te" id="Mhe-dV-dTw"/>
+                        <outlet property="floweringStageButton" destination="6vt-6p-MRW" id="CHi-au-ONN"/>
+                        <outlet property="fruitingStageButton" destination="mnv-02-fhj" id="Cln-KI-ume"/>
+                        <outlet property="plantLatinNameLabel" destination="SHB-j8-6Oh" id="2hR-DO-C9o"/>
+                        <outlet property="plantNicknameLabel" destination="qBI-Wt-nYI" id="AHg-w7-KbA"/>
+                        <outlet property="plantedStageButton" destination="Y2W-pc-6gD" id="rlh-UN-AOE"/>
+                        <outlet property="shootingStageButton" destination="BZp-Nn-LlN" id="hFR-cm-EpI"/>
+                        <outlet property="stagesStackView" destination="hkJ-OZ-KxQ" id="kHu-HO-uFr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUR-c9-lfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2192" y="349"/>
+        </scene>
+        <!--Add New Plant-->
+        <scene sceneID="geh-T0-pxU">
+            <objects>
+                <viewController title="Add New Plant" id="eWV-Ze-Xei" customClass="NewPlantViewController" customModule="PlantDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Om-wP-6pB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvD-Qf-fLq">
+                                <rect key="frame" x="158.5" y="778" width="97" height="30"/>
+                                <state key="normal" title="Save My Plant"/>
+                                <connections>
+                                    <action selector="addNewPlant" destination="eWV-Ze-Xei" eventType="touchUpInside" id="Kdq-2r-LL7"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KPp-lr-8KS">
+                                <rect key="frame" x="20" y="20" width="374" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfG-7g-5HT">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="close" destination="eWV-Ze-Xei" eventType="touchUpInside" id="ld0-QM-Qh3"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1W-cg-yka">
+                                        <rect key="frame" x="0.0" y="50" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="K3z-VL-hxc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="eWV-Ze-Xei" id="aka-gx-UJ7"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WjF-y9-L0Z">
+                                        <rect key="frame" x="0.0" y="120" width="374" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="eWV-Ze-Xei" id="Fax-ZV-Y5F"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latin Name (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgh-gG-5Hn">
+                                        <rect key="frame" x="0.0" y="190" width="374" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="eWV-Ze-Xei" id="hTS-zO-Jri"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WjF-y9-L0Z" firstAttribute="height" secondItem="a1W-cg-yka" secondAttribute="height" id="3x3-90-RIi"/>
+                                    <constraint firstItem="sgh-gG-5Hn" firstAttribute="height" secondItem="a1W-cg-yka" secondAttribute="height" id="9zA-zM-IoZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XvD-Qf-fLq" firstAttribute="centerX" secondItem="iw2-oP-UUn" secondAttribute="centerX" id="1Gi-IR-ImW"/>
+                            <constraint firstItem="iw2-oP-UUn" firstAttribute="trailing" secondItem="KPp-lr-8KS" secondAttribute="trailing" constant="20" id="6KJ-gX-1R1"/>
+                            <constraint firstItem="KPp-lr-8KS" firstAttribute="top" secondItem="iw2-oP-UUn" secondAttribute="top" constant="20" id="R0R-ct-MDa"/>
+                            <constraint firstItem="KPp-lr-8KS" firstAttribute="leading" secondItem="iw2-oP-UUn" secondAttribute="leading" constant="20" id="ThP-40-1fO"/>
+                            <constraint firstItem="iw2-oP-UUn" firstAttribute="bottom" secondItem="XvD-Qf-fLq" secondAttribute="bottom" id="nOk-sf-MED"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iw2-oP-UUn"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="XvD-Qf-fLq" id="Glr-OP-BsL"/>
+                        <outlet property="closeButton" destination="cfG-7g-5HT" id="oup-eN-MOE"/>
+                        <outlet property="latinNameTextField" destination="sgh-gG-5Hn" id="oVf-CU-yrn"/>
+                        <outlet property="nameTextField" destination="a1W-cg-yka" id="Z1x-3v-Naw"/>
+                        <outlet property="nicknameTextField" destination="WjF-y9-L0Z" id="1EZ-9t-a9H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxh-6F-8O5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2191" y="-321"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JCU-rz-aFX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rnA-k0-Hmz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nqC-I7-KDj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lej-yC-PDG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dtz-Wy-Qof" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bud" width="474" height="474"/>
+        <image name="endOfLife" width="612" height="612"/>
+        <image name="flower" width="924" height="980"/>
+        <image name="fruit" width="512" height="512"/>
+        <image name="seed" width="512" height="512"/>
+        <image name="shoot" width="360" height="360"/>
+    </resources>
+</document>
